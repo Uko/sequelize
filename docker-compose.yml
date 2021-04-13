@@ -72,9 +72,19 @@ services:
       - "8980:3306"
     container_name: mysql-57
 
-  # MSSQL
-  mssql:
-    image: microsoft/mssql-server-linux:latest
+  # MSSQL 2017
+  mssql-2017:
+    image: mcr.microsoft.com/mssql/server:2017-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: yourStrong(!)Password
+    ports:
+      - "8970:1433"
+    container_name: mssql
+
+  # MSSQL 2019
+  mssql-2019:
+    image: mcr.microsoft.com/mssql/server:2019-latest
     environment:
       ACCEPT_EULA: "Y"
       SA_PASSWORD: yourStrong(!)Password

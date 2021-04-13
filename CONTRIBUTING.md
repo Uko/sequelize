@@ -93,7 +93,7 @@ If running on macOS, install [Docker for Mac](https://docs.docker.com/docker-for
 Now launch the docker mysql and postgres servers with this command (you can add `-d` to run them in daemon mode):
 
 ```sh
-$ docker-compose up postgres-95 mysql-57 mssql
+$ docker-compose up postgres-95 mysql-57 mssql-2019
 ```
 
 > **_NOTE:_** If you get the following output:
